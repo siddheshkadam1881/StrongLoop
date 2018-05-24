@@ -1,0 +1,57 @@
+{
+  "name": "Note",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "default": "\"siddhesh\""
+    },
+    "Description": {
+      "type": "string",
+      "required": true,
+      "default": "\"Description\""
+    },
+    "color": {
+      "type": "string"
+    },
+    "pinnd": {
+      "type": "boolean"
+    },
+    "archieved": {
+      "type": "boolean",
+      "default": false
+    },
+    "Trash": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "remainder": {
+      "type": "date"
+    },
+    "image": {
+      "type": "buffer"
+    },
+    "label": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
